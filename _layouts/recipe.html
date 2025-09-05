@@ -1,1 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>{{ page.title }}</h1>
+    <p>Servings: {{ page.servings }}</p>
+    <h2>Ingredients</h2>
+    <ul>
+      {% for ing in page.ingredients %}
+        <li>{{ ing.quantity }} {{ ing.unit }} {{ ing.item }}</li>
+      {% endfor %}
+    </ul>
+    <h2>Instructions</h2>
+    {{ content }}
+  </body>
+</html>
 
