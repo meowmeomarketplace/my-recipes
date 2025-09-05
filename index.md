@@ -1,1 +1,13 @@
+---
+layout: default
+title: "Home"
+---
+
+# My Recipes
+
+<ul>
+{% for recipe in site.recipes %}
+  <li><a href="{{ recipe.url }}">{{ recipe.title }}</a></li>
+{% endfor %}
+</ul>
 
